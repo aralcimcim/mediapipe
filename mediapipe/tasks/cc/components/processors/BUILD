@@ -20,6 +20,7 @@ cc_library(
     name = "classifier_options",
     srcs = ["classifier_options.cc"],
     hdrs = ["classifier_options.h"],
+    visibility = ["//visibility:public"],
     deps = ["//mediapipe/tasks/cc/components/processors/proto:classifier_options_cc_proto"],
 )
 
@@ -67,6 +68,7 @@ cc_library(
     name = "embedder_options",
     srcs = ["embedder_options.cc"],
     hdrs = ["embedder_options.h"],
+    visibility = ["//visibility:public"],
     deps = ["//mediapipe/tasks/cc/components/processors/proto:embedder_options_cc_proto"],
 )
 
@@ -82,6 +84,7 @@ cc_library(
         "//mediapipe/framework/formats:tensor",
         "//mediapipe/framework/tool:options_map",
         "//mediapipe/tasks/cc:common",
+        "//mediapipe/tasks/cc/components/calculators:embedding_aggregation_calculator",
         "//mediapipe/tasks/cc/components/calculators:tensors_to_embeddings_calculator",
         "//mediapipe/tasks/cc/components/calculators:tensors_to_embeddings_calculator_cc_proto",
         "//mediapipe/tasks/cc/components/containers/proto:embeddings_cc_proto",

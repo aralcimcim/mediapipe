@@ -12,22 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package(default_visibility = ["//mediapipe/tasks:internal"])
+package(default_visibility = ["//visibility:public"])
 
 licenses(["notice"])
 
 cc_library(
     name = "rect",
     hdrs = ["rect.h"],
-)
-
-cc_library(
-    name = "gesture_recognition_result",
-    hdrs = ["gesture_recognition_result.h"],
-    deps = [
-        "//mediapipe/framework/formats:classification_cc_proto",
-        "//mediapipe/framework/formats:landmark_cc_proto",
-    ],
 )
 
 cc_library(
@@ -57,4 +48,9 @@ cc_library(
     deps = [
         "//mediapipe/tasks/cc/components/containers/proto:embeddings_cc_proto",
     ],
+)
+
+cc_library(
+    name = "landmark",
+    hdrs = ["landmark.h"],
 )

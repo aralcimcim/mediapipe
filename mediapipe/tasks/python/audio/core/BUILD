@@ -32,6 +32,7 @@ py_library(
         ":audio_task_running_mode",
         "//mediapipe/framework:calculator_py_pb2",
         "//mediapipe/python:_framework_bindings",
+        "//mediapipe/python:packet_creator",
         "//mediapipe/tasks/python/core:optional_dependencies",
     ],
 )
